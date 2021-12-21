@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042A3B602771F42A00823F07 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A3B5F2771F42A00823F07 /* StarWarsModel.swift */; };
 		0435A4B827709E9E005B0AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435A4B727709E9E005B0AC4 /* AppDelegate.swift */; };
 		0435A4BA27709E9E005B0AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435A4B927709E9E005B0AC4 /* SceneDelegate.swift */; };
 		0435A4BC27709E9E005B0AC4 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435A4BB27709E9E005B0AC4 /* PeopleViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042A3B5F2771F42A00823F07 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 		0435A4B427709E9E005B0AC4 /* GET Films.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GET Films.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0435A4B727709E9E005B0AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0435A4B927709E9E005B0AC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				0435A4B727709E9E005B0AC4 /* AppDelegate.swift */,
 				0435A4B927709E9E005B0AC4 /* SceneDelegate.swift */,
 				0435A4BB27709E9E005B0AC4 /* PeopleViewController.swift */,
+				042A3B5F2771F42A00823F07 /* StarWarsModel.swift */,
 				0435A4D02770A1D4005B0AC4 /* DataModel.swift */,
 				0435A4BD27709E9E005B0AC4 /* Main.storyboard */,
 				0435A4CE27709F8E005B0AC4 /* FilmTableViewController.swift */,
@@ -150,6 +153,7 @@
 				0435A4BC27709E9E005B0AC4 /* PeopleViewController.swift in Sources */,
 				0435A4B827709E9E005B0AC4 /* AppDelegate.swift in Sources */,
 				0435A4BA27709E9E005B0AC4 /* SceneDelegate.swift in Sources */,
+				042A3B602771F42A00823F07 /* StarWarsModel.swift in Sources */,
 				0435A4CF27709F8E005B0AC4 /* FilmTableViewController.swift in Sources */,
 				0435A4D12770A1D4005B0AC4 /* DataModel.swift in Sources */,
 			);

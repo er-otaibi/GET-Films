@@ -38,13 +38,7 @@ class FilmTableViewController: UITableViewController {
     
     func gatData() {
       
-            // specify the url that we will be sending the GET request to
-            
-            let url = URL(string: "https://swapi.dev/api/films/?format=json")
-            let session = URLSession.shared
-                
-                
-                let task = session.dataTask(with: url!, completionHandler: {
+        StarWarsModel.getAllFilms(completionHandler: {
                     // see: Swift closure expression syntax
                     data, response, error in
                     print("in here")
@@ -67,9 +61,6 @@ class FilmTableViewController: UITableViewController {
             })
             // execute the task and then wait for the response
             // to run the completion handler. This is async!
-            task.resume()
           tableView.dataSource = self
         }
-        
-    
 }

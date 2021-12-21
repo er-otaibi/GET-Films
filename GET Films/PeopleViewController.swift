@@ -43,13 +43,7 @@ class PeopleViewController: UITableViewController {
         
         for i in 1...9 {
             
-            // specify the url that we will be sending the GET request to
-            
-            let url = URL(string: "https://swapi.dev/api/people/?page=\(i)&format=json")
-            
-            let session = URLSession.shared
-                        
-            let task = session.dataTask(with: url!, completionHandler: {
+            StarWarsModel.getAllPeople(pageIndex: i , completionHandler: {
                 // see: Swift closure expression syntax
                 data, response, error in
                 print("in here")
@@ -80,7 +74,7 @@ class PeopleViewController: UITableViewController {
             })
             // execute the task and then wait for the response
             // to run the completion handler. This is async!
-            task.resume()
+    
             tableView.dataSource = self
             
         }// for loop
