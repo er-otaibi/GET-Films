@@ -38,6 +38,19 @@ class PeopleViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! DetailsViewController
+        destination.people =  sender as? ResultPeople
+    }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let film = people?.results[indexPath.row]
+        performSegue(withIdentifier: "Details", sender: film)
+    }
+    
+    
     
     func gatData() {
         
@@ -74,7 +87,7 @@ class PeopleViewController: UITableViewController {
             })
             // execute the task and then wait for the response
             // to run the completion handler. This is async!
-    
+            
             tableView.dataSource = self
             
         }// for loop

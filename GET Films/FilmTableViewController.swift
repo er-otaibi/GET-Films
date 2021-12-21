@@ -35,6 +35,18 @@ class FilmTableViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destination = segue.destination as! DetailsViewController
+            destination.film =  sender as? ResultFilm
+        }
+
+
+        
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let film = film?.results[indexPath.row]
+           performSegue(withIdentifier: "Details", sender: film)
+        }
+    
     
     func gatData() {
       

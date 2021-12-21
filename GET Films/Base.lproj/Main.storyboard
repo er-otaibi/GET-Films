@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,6 +32,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="People" id="gLe-aO-mwM"/>
+                    <connections>
+                        <segue destination="CPk-zp-Rbk" kind="presentation" identifier="Details" id="9Da-FY-cm8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBz-Ho-XgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,6 +46,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="isx-GV-5fJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ql-gQ-rXL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -78,12 +83,76 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Film" id="yYU-CS-bSR"/>
+                    <connections>
+                        <segue destination="CPk-zp-Rbk" kind="presentation" identifier="Details" id="XLa-yB-spJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efb-o3-ZdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="507" y="927"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="XsN-hC-Mwd">
+            <objects>
+                <viewController id="CPk-zp-Rbk" customClass="DetailsViewController" customModule="GET_Films" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kK0-MW-nzo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dwE-sy-yUt">
+                                <rect key="frame" x="30" y="100" width="354" height="608"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACm-YB-AnK">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="152"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fR-yC-WE8">
+                                        <rect key="frame" x="0.0" y="152" width="354" height="152"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKl-rG-QbW">
+                                        <rect key="frame" x="0.0" y="304" width="354" height="152"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJn-4e-PrE">
+                                        <rect key="frame" x="0.0" y="456" width="354" height="152"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UsJ-1W-cFk"/>
+                        <color key="backgroundColor" red="0.9877753827303617" green="0.86124229200980951" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dwE-sy-yUt" firstAttribute="top" secondItem="UsJ-1W-cFk" secondAttribute="top" constant="100" id="39D-SI-XuS"/>
+                            <constraint firstItem="UsJ-1W-cFk" firstAttribute="bottom" secondItem="dwE-sy-yUt" secondAttribute="bottom" constant="100" id="BBV-IT-nKl"/>
+                            <constraint firstItem="dwE-sy-yUt" firstAttribute="leading" secondItem="UsJ-1W-cFk" secondAttribute="leading" constant="30" id="FD3-zx-4lK"/>
+                            <constraint firstItem="UsJ-1W-cFk" firstAttribute="trailing" secondItem="dwE-sy-yUt" secondAttribute="trailing" constant="30" id="WQQ-9r-mJh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Label1" destination="ACm-YB-AnK" id="Ves-Py-XEz"/>
+                        <outlet property="Label2" destination="8fR-yC-WE8" id="snH-jB-nvT"/>
+                        <outlet property="Label3" destination="HKl-rG-QbW" id="XgA-5h-OjG"/>
+                        <outlet property="Label4" destination="NJn-4e-PrE" id="PtL-Bu-GGp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nxg-c4-3VV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="869"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Da-FY-cm8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
